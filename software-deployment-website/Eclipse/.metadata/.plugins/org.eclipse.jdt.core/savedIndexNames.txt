@@ -1,0 +1,2 @@
+INDEX VERSION 1.129+F:\Dropbox\Apps\Heroku\software-deployment-website\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
+2582384556.index
