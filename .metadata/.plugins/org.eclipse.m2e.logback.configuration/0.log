@@ -1195,3 +1195,11 @@ org.eclipse.jdt.core.JavaModelException: build/classes/com/softwaredeployment [i
 2016-09-24 16:00:38,377 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\test\resources
 2016-09-24 16:00:51,019 [Worker-90] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp
 2016-09-24 16:00:51,020 [Worker-90] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2016-09-24 16:14:48,132 [Worker-110] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-24 16:14:48,133 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\main\resources
+2016-09-24 16:14:48,135 [Worker-110] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-24 16:14:48,135 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\test\resources
+2016-09-24 16:14:54,278 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-24 16:14:54,279 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\main\resources
+2016-09-24 16:14:54,280 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-24 16:14:54,282 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\test\resources
