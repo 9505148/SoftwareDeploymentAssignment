@@ -1203,3 +1203,7 @@ org.eclipse.jdt.core.JavaModelException: build/classes/com/softwaredeployment [i
 2016-09-24 16:14:54,279 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\main\resources
 2016-09-24 16:14:54,280 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-09-24 16:14:54,282 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\test\resources
+2016-09-24 17:52:06,963 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-24 17:52:06,964 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\main\resources
+2016-09-24 17:52:06,966 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-09-24 17:52:06,967 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Joshua\SoftwareDeploymentAssignment\software-deployment-website\Eclipse\webapp\src\test\resources
