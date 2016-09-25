@@ -1,8 +1,8 @@
 Instructions
 
-Clone
+Clone repo
 Open Eclipse
-Import Project
+File > Import Project > General > Projects from Folder or Archive > Next > select the directory and check the project > finish
 Window > Show View > Servers > click the link to add the server
 
 
