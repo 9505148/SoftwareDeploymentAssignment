@@ -1,1 +1,1 @@
-web: software-deployment-website/target/bin/webapp
+web: /target/bin/webapp
