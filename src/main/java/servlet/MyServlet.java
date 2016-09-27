@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(
         name = "MyServlet", 
-        urlPatterns = {"/hello"}
+        urlPatterns = {"/status"}
     )
 public class MyServlet extends HttpServlet {
 
@@ -19,7 +19,7 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
-        out.write("hello heroku".getBytes());
+        out.write("If you are seeing this, then the servlet is working".getBytes());
         out.flush();
         out.close();
     }
