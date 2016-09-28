@@ -12,6 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import java.sql.SQLException;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.sql.Statement;
+
+//https://www.mkyong.com/jdbc/jdbc-statement-example-insert-a-record/
+
 @WebServlet(
         name = "MyServlet", 
         urlPatterns = {"/status"}
