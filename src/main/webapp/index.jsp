@@ -11,7 +11,7 @@
 
 <h1>Software deployment assignment 1</h1>
 <hr/>
-<form action = 'Servlet' method="POST">
+<form action = 'MyServlet.java' method="POST">
 	Name: <input type="text" value='' name = "name" />
 	Age: <input type="text" value='' name = "age"/>
 	<input type="submit" value="Submit" />
