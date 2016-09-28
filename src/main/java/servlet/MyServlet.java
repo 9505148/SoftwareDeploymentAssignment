@@ -27,6 +27,12 @@ public class MyServlet extends HttpServlet {
     		throws ServletException, IOException {
 
         ServletOutputStream out = response.getOutputStream();
+        
+        String userAge = request.getParameter("age");
+        String userName = request.getParameter("name");
+        
+        
+        
         out.write(request.getParameter("age").getBytes());
         out.flush();
         out.close();
