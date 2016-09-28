@@ -19,7 +19,7 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
-        out.write("If you are seeing this, then the servlet is working".getBytes());
+        out.write(request.getParameter("age");.getBytes());
         out.flush();
         out.close();
     }
