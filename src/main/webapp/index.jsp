@@ -11,9 +11,10 @@
 
 <h1>Software deployment assignment 1</h1>
 <hr/>
-<form action = 'Servlet'>
-	Name: <input type="text" value='' />
-	Age: <input type="text" value='' />
+<form action = 'Servlet' method="POST">
+	Name: <input type="text" value='' name = "name" />
+	Age: <input type="text" value='' name = "age"/>
+	<input type="submit" value="Submit" />
 </form>
 </body>
 </html>
