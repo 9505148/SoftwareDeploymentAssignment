@@ -26,8 +26,8 @@ public class MyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     		throws ServletException, IOException {
 
-        ServletOutputStream out = resp.getOutputStream();
-        out.write(out.write(request.getParameter("age").getBytes());
+        ServletOutputStream out = response.getOutputStream();
+        out.write(request.getParameter("age").getBytes());
         out.flush();
         out.close();
     }
