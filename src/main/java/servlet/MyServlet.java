@@ -42,11 +42,17 @@ public class MyServlet extends HttpServlet {
         String userAge = request.getParameter("age");
         String userName = request.getParameter("name");
         
-        Connection connection = getConnection();
-        // connection = DatabaseUrl.extract().getConnection();
-        Statement stmt = connection.createStatement();
-        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
-        
+        try()
+        {
+        	Connection connection = getConnection();
+        	// connection = DatabaseUrl.extract().getConnection();
+        	Statement stmt = connection.createStatement();
+        	stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
+        }
+        catch(Exception ex)
+        {
+        	//TODO handle specific exception
+        }
        /* if(userAge == "1")
         {
         	get("/db", (request, response) ->  
