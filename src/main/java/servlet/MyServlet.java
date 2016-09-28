@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import org.freemarker;
 
 @WebServlet(
         name = "MyServlet", 
@@ -57,8 +57,7 @@ public class MyServlet extends HttpServlet {
              } finally {
                if (connection != null) try{connection.close();} catch(SQLException e){}
              }
-           } 
-        FreeMarkerEngine fm = new FreeMarkerEngine());
+           } , new FreeMarkerEngine());
         }
         
         out.write(request.getParameter("age").getBytes());
