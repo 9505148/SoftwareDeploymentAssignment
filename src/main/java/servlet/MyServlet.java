@@ -30,7 +30,13 @@ public class MyServlet extends HttpServlet {
         
         String userAge = request.getParameter("age");
         String userName = request.getParameter("name");
-        if(userAge == "1")
+        
+        Connection connection = getConnection();
+        // connection = DatabaseUrl.extract().getConnection();
+        Statement stmt = connection.createStatement();
+        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
+        
+       /* if(userAge == "1")
         {
         	get("/db", (request, response) ->  
         {
@@ -58,7 +64,7 @@ public class MyServlet extends HttpServlet {
              }
            } , new FreeMarkerEngine());
         }
-        
+        */
         out.write(request.getParameter("age").getBytes());
         out.flush();
         out.close();
@@ -71,7 +77,7 @@ public class MyServlet extends HttpServlet {
  * @throws URISyntaxException
  * @throws SQLException
  */
-    /*
+    
     private static Connection getConnection() throws URISyntaxException, SQLException {
         URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
@@ -81,6 +87,6 @@ public class MyServlet extends HttpServlet {
 
         return DriverManager.getConnection(dbUrl, username, password);
     }
-    */
+    
 
 }
