@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import java.net.URI;
@@ -39,15 +40,26 @@ public class MyServlet extends HttpServlet {
 
         ServletOutputStream out = response.getOutputStream();
         
-        String userAge = request.getParameter("age");
         String userName = request.getParameter("name");
+        String userAge = request.getParameter("age");
+        
+        PreparedStatement preparedStatement = null;
         
         try
         {
         	Connection connection = getConnection();
         	// connection = DatabaseUrl.extract().getConnection();
         	Statement stmt = connection.createStatement();
-        	stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
+        	stmt.executeUpdate("CREATE TABLE IF NOT EXISTS user ("
+        			+ "name varchar(40)"
+        			+ "age char(9))");
+        	String insertStatement = "INSERT INTO user(name, age) VALUES(?, ?)";
+        	preparedStatement = connection.prepareStatement(insertStatement);
+        	
+        	preparedStatement.setString(1, userName);
+        	preparedStatement.setString(2, userAge);
+        	
+        	preparedStatement.executeUpdate();        	
         }
         catch(Exception ex)
         {
@@ -95,7 +107,8 @@ public class MyServlet extends HttpServlet {
  * @throws SQLException
  */
     
-    private static Connection getConnection() throws URISyntaxException, SQLException {
+    private static Connection getConnection() throws URISyntaxException, SQLException 
+    {
         URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
         String username = dbUri.getUserInfo().split(":")[0];
