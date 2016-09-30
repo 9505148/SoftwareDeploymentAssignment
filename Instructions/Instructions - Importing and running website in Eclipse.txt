@@ -1,0 +1,10 @@
+Instructions
+
+Clone repo
+Open Eclipse Jee Neon (EE IDE for Web Developers) (https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neonr)
+File > Import Project > General > Projects from Folder or Archive > Next > select the directory and check the project > finish
+Window > Show View > Servers > click the link to add the server
+
+
+Maybe try this if not work
+Window > Preferences > Server > Runtime Environment > Add > Apache Tomcat v9.0
