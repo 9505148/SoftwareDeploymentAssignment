@@ -11,13 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 //https://www.mkyong.com/jdbc/jdbc-statement-example-insert-a-record/
 
@@ -94,7 +100,20 @@ public class MyServlet extends HttpServlet {
            } , new FreeMarkerEngine());
         }
         */
-        out.write(request.getParameter("age").getBytes());
+        
+        String message = "";
+        Calendar currentCalendar = Calendar.getInstance();
+        try 
+        {
+			Calendar userCalendar = getDateFromString(request.getParameter("age"));
+			long dayDifference = daysBetween(userCalendar, currentCalendar);
+			message = "You are " + dayDifference + " days old."; 
+		} 
+        catch (ParseException e) 
+        {
+			message = "Invalid Age Format";
+		}
+        out.write(message.getBytes());
         out.flush();
         out.close();
     }
@@ -118,5 +137,21 @@ public class MyServlet extends HttpServlet {
         return DriverManager.getConnection(dbUrl, username, password);
     }
     
-
+    public static Calendar getDateFromString(String inputString) throws ParseException
+    {
+    	Calendar calendar = new GregorianCalendar();
+    	Date date = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(inputString);
+		calendar.setTime(date);
+    	
+    	return calendar;
+    }
+    
+    public static long daysBetween(Calendar startDate, Calendar endDate) 
+    {
+        long end = endDate.getTimeInMillis();
+        long start = startDate.getTimeInMillis();
+        return TimeUnit.MILLISECONDS.toDays(Math.abs(end - start));
+    }
+    
+    
 }
