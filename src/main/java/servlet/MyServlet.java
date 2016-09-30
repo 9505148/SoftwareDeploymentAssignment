@@ -42,7 +42,7 @@ public class MyServlet extends HttpServlet {
         String userAge = request.getParameter("age");
         String userName = request.getParameter("name");
         
-        try()
+        try
         {
         	Connection connection = getConnection();
         	// connection = DatabaseUrl.extract().getConnection();
